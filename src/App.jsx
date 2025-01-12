@@ -13,6 +13,7 @@ import {
   EllipsisVertical,
   ArrowLeftToLine,
   ArrowRightToLine,
+  ArrowLeft,
 } from "lucide-react";
 import { fromLonLat, transform } from "ol/proj";
 import { getLength } from "ol/sphere";
@@ -181,7 +182,7 @@ function MissionModal(props) {
 
   return (
     <div className="mission-modal">
-      <div className="modal-header">
+      {/* <div className="modal-header">
         <h2>Mission Creation</h2>
         <button className="action-btn">
           <X size={15} />
@@ -222,7 +223,8 @@ function MissionModal(props) {
       </div>
       <div className="modal-footer">
         <button className="btn">Generate Data</button>
-      </div>
+      </div> */}
+      <PolygonToolModal />
     </div>
   );
 }
@@ -250,11 +252,40 @@ function TableRow({ coord, key }) {
         <td>{`${coord.coordinates[1]}, ${coord.coordinates[0]}`}</td>
         <td>{coord.distance === 0 ? "--" : coord.distance.toFixed(1)}</td>
         <td>
-          <button className="action-btn" onClick={() => setShowActions((prev) => !prev)}>
+          <button
+            className="action-btn"
+            onClick={() => setShowActions((prev) => !prev)}
+          >
             <EllipsisVertical size={15} />
           </button>
         </td>
       </tr>
+    </>
+  );
+}
+
+function PolygonToolModal() {
+  return (
+    <>
+      <div className="modal-header section">
+        <div className="header-navigation">
+          <ArrowLeft size={15} />
+          <span>Mission Planner</span>
+        </div>
+        <h2>Polygon Tool</h2>
+      </div>
+      <div className="modal-body">
+        <div className="instructions-block">
+          <p>
+            Click on the map to mark points of the polygon's perimeter and then press{" "}
+            <span>&#8629;</span> to close and complete the polygon.
+          </p>
+        </div>
+      </div>
+      <div className="modal-footer section">
+        <button className="btn secondary">Discard</button>
+        <button className="btn">Import Points</button>
+      </div>
     </>
   );
 }
