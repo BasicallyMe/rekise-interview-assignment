@@ -1,0 +1,150 @@
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100dvh;
+}
+
+.overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+}
+
+.mission-modal {
+  background-color: white;
+  color: black;
+  border-radius: 6px;
+  min-width: 500px;
+  max-width: 500px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: solid 1px #66666e;
+}
+
+.modal-header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 10px;
+  font-size: 0.8rem;
+  border-bottom: solid 1px #66666e;
+}
+
+.modal-body h3 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.instructions-block {
+  background-color: #eeeeee;
+  border: dashed 1px #66666e;
+  color: #66666e;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0;
+  color: black;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  border: solid 1px #66666e;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+table thead th {
+  font-weight: normal;
+  text-align: left;
+  padding: 7px 0;
+}
+
+table tbody {
+  background-color: #eeeeee;
+}
+
+table tbody tr:not(:first-child) {
+  border-top: solid 1px #e4e4e8;
+}
+
+table tbody tr td {
+  padding: 7px 0;
+}
+
+table tbody tr {
+  position: relative;
+}
+
+.actions-popup {
+  background-color: white;
+  position: absolute;
+  right: -150px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.actions-popup button {
+  background-color: white;
+  color: black;
+  font-size: 0.8rem;
+}
+
+.actions-popup button:hover {
+  background-color: #eeeeee;
+}
